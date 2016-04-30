@@ -9,5 +9,3 @@ VOLUME ["/liquidsoap"]
 WORKDIR /liquidsoap
 
 ENTRYPOINT [ "liquidsoap" ]
-
-USER nobody
