@@ -5,6 +5,9 @@ RUN apt-get update && apt-get install -y \
     liquidsoap \
  && rm -rf /var/lib/apt/lists/*
 
+VOLUME ["/liquidsoap"]
+WORKDIR /liquidsoap
+
 ENTRYPOINT [ "liquidsoap" ]
 
 USER nobody
