@@ -3,7 +3,9 @@ MAINTAINER Dmitry Romanov "dmitry.romanov85@gmail.com"
 
 RUN ["opam", "depext", "-i", "conf-libpcre"]
 RUN ["opam", "install", "liquidsoap.1.2.1"]
+RUN ["opam", "depext", "-i", "lame"]
 RUN ["opam", "install", "lastfm"]
+RUN ["opam", "install", "cry"]
 
 VOLUME ["/liquidsoap"]
 WORKDIR /liquidsoap
