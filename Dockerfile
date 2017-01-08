@@ -1,11 +1,9 @@
-FROM ubuntu:14.04
+FROM ocaml/opam:ubuntu-14.04_ocaml-4.01.0
 MAINTAINER Dmitry Romanov "dmitry.romanov85@gmail.com"
 
-RUN apt-get update && apt-get install -y \
-    liquidsoap \
-    liquidsoap-plugin-lastfm \
-    telnet \
- && rm -rf /var/lib/apt/lists/*
+RUN ["opam", "depext", "-i", "conf-libpcre.1"]
+RUN ["opam", "install", "liquidsoap.1.2.1"]
+RUN ["opam", "install", "lastfm"]
 
 VOLUME ["/liquidsoap"]
 WORKDIR /liquidsoap
@@ -13,4 +11,3 @@ WORKDIR /liquidsoap
 ENTRYPOINT [ "liquidsoap" ]
 
 USER nobody
-
