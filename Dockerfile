@@ -7,7 +7,7 @@ RUN ["opam", "depext", "-i", "lame"]
 RUN ["opam", "depext", "-i", "mad"]
 RUN ["opam", "install", "lastfm"]
 RUN ["opam", "install", "cry"]
-RUN ["opam", "depext", "-i", "shine"]
+RUN ["opam", "depext", "-i", "taglib"]
 
 VOLUME ["/liquidsoap"]
 WORKDIR /liquidsoap
