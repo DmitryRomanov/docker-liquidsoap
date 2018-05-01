@@ -15,4 +15,4 @@ RUN ["opam", "depext", "-i", "taglib"]
 VOLUME ["/liquidsoap"]
 WORKDIR /liquidsoap
 
-ENTRYPOINT [ "/home/opam/.opam/system/bin/liquidsoap" ]
+ENTRYPOINT [ "/home/opam/.opam/4.05.0/bin/liquidsoap" ]
